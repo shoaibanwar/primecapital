@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body>
+    <h1>Welcome to Financial Reports!</h1>
+    <p>Choose an option:</p>
+    <ul>
+        <li><a href="{{ url_for('print_presenter') }}">Print PDF Report</a></li>
+        <li><a href="{{ url_for('screen_presenter') }}">View Screen Report</a></li>
+    </ul>
+</body>
+
+</html>
