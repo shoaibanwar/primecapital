@@ -2,7 +2,7 @@
 - Docker
 - git
 
-## clone the repository
+## Clone Repository
 - git clone https://github.com/yourusername/primecapital.git
 - cd primecapital
 
