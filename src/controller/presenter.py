@@ -9,10 +9,10 @@ class FinancialReportPresenter(ABC):
     def handle_request(self):
         pass
 
-
 class Presenter(FinancialReportPresenter):
     def handle_request(self):
         """Handles the request for financial report generation and returns the response data."""
+        """Send as an argument, 1 or more Enums deifined in FinancialReportRequest class"""
         report_request = FinancialReportRequest(("TABLE", "TEXT"))
         data: FinancialReportResponse = report_request.manage()
         report_generator:FinancialReportGenerator = FinancialReportGenerator(data, config.OUTPUT_PDF_PATH)
