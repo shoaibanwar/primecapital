@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from models.financial_entities import FinancialText, FinancialTable
+from .financial_entities import FinancialText, FinancialTable
 from typing import Optional
 
 @dataclass

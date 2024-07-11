@@ -1,5 +1,5 @@
 #Financial DataMapper for Datafile
-from repository.repository_interface import FinancialRepositoryInterface
+from .repository_interface import FinancialRepositoryInterface
 from models.financial_entities import FinancialText
 
 

@@ -1,6 +1,5 @@
 #Financial DataMapper for Database
-
-from repository.repository_interface import FinancialRepositoryInterface
+from .repository_interface import FinancialRepositoryInterface
 from models.financial_database import FinancialDatabase
 from models.financial_entities import FinancialTable
 

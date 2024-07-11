@@ -2,7 +2,7 @@ import sqlite3
 from sqlalchemy import create_engine, Column, Integer, String, Float
 from sqlalchemy.orm import declarative_base, sessionmaker
 from sqlalchemy.orm.session import Session
-from models.financial_entities import FinancialTable
+from .financial_entities import FinancialTable
 
 Base = declarative_base()
 
@@ -23,10 +23,10 @@ class FinancialDatabase:
 
     def get_all_data(self) -> FinancialTable:
         """Fetches all financial report data from the database."""
-        session: Session = self.Session()
-        reports = session.query(FinancialReport).all()
-        report_data = [[report.id, report.name, report.amount] for report in reports]
-        return FinancialTable(data=report_data)
+        with self.Session() as session:
+            reports = session.query(FinancialReport).all()
+            report_data = [[report.id, report.name, report.amount] for report in reports]
+            return FinancialTable(data=report_data)
     
 
     def close(self) -> None:

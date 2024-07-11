@@ -4,8 +4,8 @@ from repository.datafile_repository import FinancialDataFileRepository
 from repository.database_repository import  FinancialDataBaseRepository
 from repository.repository_interface import FinancialRepositoryInterface
 from interactor.data_gateway import FinancialDataGateway
-from models.report_response import FinancialReportResponse
-from models.financial_entities import FinancialEntity
+from .report_response import FinancialReportResponse
+from .financial_entities import FinancialEntity
 import config
 
 class RepositoryEnum(Enum):
